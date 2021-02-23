@@ -19,56 +19,56 @@ class Request implements RequestInterface
      *
      * @var string
      */
-    private $protocol;
+    private string $protocol;
 
     /**
      * Contains the method.
      *
      * @var string
      */
-    private $method;
+    private string $method;
 
     /**
      * Contains the payload.
      *
      * @var mixed
      */
-    private $payload;
+    private mixed $payload;
 
     /**
      * Contains the headers.
      *
      * @var array
      */
-    private $headers;
+    private array $headers;
 
     /**
      * Contains the URI.
      *
      * @var UriInterface
      */
-    private $uri;
+    private UriInterface $uri;
 
     /**
      * Contains the cookie manager.
      *
      * @var CookieManagerInterface
      */
-    private $cookieManager;
+    private CookieManagerInterface $cookieManager;
 
     /**
      * Contains the uploaded file manager.
      *
      * @var UploadedFileManagerInterface
      */
-    private $uploadedFileManager;
+    private UploadedFileManagerInterface $uploadedFileManager;
 
     /**
      * Contains the server variables.
      *
      * @var array
      */
-    private $serverVariables;
+    private array $serverVariables;
 
     /**
      * Constructor.
@@ -86,7 +86,7 @@ class Request implements RequestInterface
         UriInterface $uri,
         CookieManagerInterface $cookieManager,
         UploadedFileManagerInterface $uploadedFileManager,
-        $payload = null,
+        mixed $payload = null,
         string $protocol = '',
         string $method = '',
         array $headers = [],
@@ -127,7 +127,7 @@ class Request implements RequestInterface
      *
      * @return mixed
      */
-    public function getPayload()
+    public function getPayload(): mixed
     {
         return $this->payload;
     }
@@ -179,7 +179,7 @@ class Request implements RequestInterface
     /**
      * Retrieves the cookie manager.
      *
-     * @return array
+     * @return CookieManagerInterface
      */
     public function getCookieManager(): CookieManagerInterface
     {
@@ -225,7 +225,7 @@ class Request implements RequestInterface
      *
      * @return mixed
      */
-    public function getServerVariable(string $key)
+    public function getServerVariable(string $key): mixed
     {
         return $this->serverVariables[$key];
     }

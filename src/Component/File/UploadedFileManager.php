@@ -18,7 +18,7 @@ class UploadedFileManager implements UploadedFileManagerInterface
      *
      * @var array[]|FileInterface[]
      */
-    private $files;
+    private array $files;
 
     /**
      * Constructor.
@@ -82,7 +82,7 @@ class UploadedFileManager implements UploadedFileManagerInterface
      *
      * @return array|FileInterface
      */
-    private function convertNestedFile(array $file)
+    private function convertNestedFile(array $file): array | FileInterface
     {
         if (
             array_keys($file) == [
@@ -157,7 +157,7 @@ class UploadedFileManager implements UploadedFileManagerInterface
      *
      * @throws FileNotFoundException When the file is not found.
      */
-    public function getFile(string $key)
+    public function getFile(string $key): FileInterface | array
     {
         if ($this->hasFile($key)) {
             return $this->files[$key];

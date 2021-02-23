@@ -16,7 +16,7 @@ class CookieManager implements CookieManagerInterface
      *
      * @var string[]
      */
-    private $cookies;
+    private array $cookies;
 
     /**
      * Constructor.

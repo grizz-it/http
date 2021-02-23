@@ -16,28 +16,28 @@ class Response implements ResponseInterface
      *
      * @var mixed
      */
-    private $body;
+    private mixed $body;
 
     /**
      * Contains the headers.
      *
      * @var array
      */
-    private $headers;
+    private array $headers;
 
     /**
      * Contains the status code.
      *
      * @var int
      */
-    private $statusCode;
+    private int $statusCode;
 
     /**
      * Contains the reason phrase for the status code.
      *
      * @var string
      */
-    private $reasonPhrase;
+    private string $reasonPhrase;
 
     /**
      * Constructor.
@@ -48,7 +48,7 @@ class Response implements ResponseInterface
      * @param string $reasonPhrase
      */
     public function __construct(
-        $body,
+        mixed $body,
         array $headers = [],
         int $statusCode = 200,
         string $reasonPhrase = 'OK'
@@ -64,7 +64,7 @@ class Response implements ResponseInterface
      *
      * @return mixed
      */
-    public function getBody()
+    public function getBody(): mixed
     {
         return $this->body;
     }

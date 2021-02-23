@@ -44,7 +44,7 @@ class UriFactory
      * @param string $user
      * @param string $pass
      * @param string $host
-     * @param integer $port
+     * @param int $port
      * @param string $path
      * @param array $queryParameters
      * @param string $fragment

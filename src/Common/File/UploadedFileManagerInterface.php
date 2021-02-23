@@ -23,7 +23,7 @@ interface UploadedFileManagerInterface
      *
      * @return FileInterface|array
      */
-    public function getFile(string $key);
+    public function getFile(string $key): FileInterface | array;
 
     /**
      * Checks whether a file was uploaded for a key.

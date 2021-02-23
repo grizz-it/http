@@ -14,7 +14,7 @@ interface ResponseInterface
      *
      * @return mixed
      */
-    public function getBody();
+    public function getBody(): mixed;
 
     /**
      * Retrieves the status code.

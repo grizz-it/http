@@ -31,7 +31,7 @@ interface RequestInterface
      *
      * @return mixed
      */
-    public function getPayload();
+    public function getPayload(): mixed;
 
     /**
      * Retrieves the request headers.
@@ -66,7 +66,7 @@ interface RequestInterface
     /**
      * Retrieves the cookie manager.
      *
-     * @return array
+     * @return CookieManagerInterface
      */
     public function getCookieManager(): CookieManagerInterface;
 
@@ -100,5 +100,5 @@ interface RequestInterface
      *
      * @return mixed
      */
-    public function getServerVariable(string $key);
+    public function getServerVariable(string $key): mixed;
 }

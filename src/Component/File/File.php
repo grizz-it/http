@@ -16,42 +16,42 @@ class File implements FileInterface
      *
      * @var string
      */
-    private $name;
+    private string $name;
 
     /**
      * Contains the path to the tmp file.
      *
      * @var string
      */
-    private $tmpName;
+    private string $tmpName;
 
     /**
      * Cotains the error code of the file.
      *
      * @var int
      */
-    private $error;
+    private int $error;
 
     /**
      * Contains the size of the file in bytes.
      *
      * @var int
      */
-    private $size;
+    private int $size;
 
     /**
      * Contains the type sent by the browser.
      *
      * @var string
      */
-    private $type;
+    private string $type;
 
     /**
      * Contains the actual file type.
      *
      * @var string
      */
-    private $actualType;
+    private ?string $actualType = null;
 
     /**
      * Constructor.

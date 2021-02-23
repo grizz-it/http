@@ -16,49 +16,49 @@ class Uri implements UriInterface
      *
      * @var string
      */
-    private $scheme;
+    private string $scheme;
 
     /**
      * Contains the user info.
      *
      * @var array
      */
-    private $userInfo;
+    private array $userInfo;
 
     /**
      * Contains the host.
      *
      * @var string
      */
-    private $host;
+    private string $host;
 
     /**
      * Contains the port.
      *
      * @var int
      */
-    private $port;
+    private int $port;
 
     /**
      * Contains the path.
      *
      * @var string
      */
-    private $path;
+    private string $path;
 
     /**
      * Contains the query.
      *
      * @var array
      */
-    private $query;
+    private array $query;
 
     /**
      * Contains the fragment.
      *
      * @var string
      */
-    private $fragment;
+    private string $fragment;
 
     /**
      * Constructor.
